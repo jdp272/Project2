@@ -1,0 +1,4 @@
+PC
+Decoder
+how to use control
+write enabled (register)
