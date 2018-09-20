@@ -2,3 +2,9 @@ PC
 Decoder
 how to use control
 write enabled (register)
+
+
+Decoder:
+Control
+registers A/B
+write enabled?
