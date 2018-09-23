@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="2.14.6.1" version="1.0">
+<project source="2.14.6.0" version="1.0">
 This file is intended to be loaded by Logisim-evolution (https://github.com/cs3410/logisim-evolution).
 <lib desc="#Wiring" name="0"/>
   <lib desc="#Gates" name="1"/>
@@ -22,44 +22,44 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/cs34
   <lib desc="#I/O" name="5"/>
   <lib desc="#HDL-IP" name="6">
     <tool name="VHDL Entity">
-      <a name="content">--------------------------------------------------------------------------------&#13;
--- HEIG-VD, institute REDS, 1400 Yverdon-les-Bains&#13;
--- Project :&#13;
--- File    :&#13;
--- Autor   :&#13;
--- Date    :&#13;
---&#13;
---------------------------------------------------------------------------------&#13;
--- Description :&#13;
---&#13;
---------------------------------------------------------------------------------&#13;
-&#13;
-library ieee;&#13;
-  use ieee.std_logic_1164.all;&#13;
-  --use ieee.numeric_std.all;&#13;
-&#13;
-entity VHDL_Component is&#13;
-  port(&#13;
-  ------------------------------------------------------------------------------&#13;
-  --Insert input ports below&#13;
-    horloge_i  : in  std_logic;                    -- input bit example&#13;
-    val_i      : in  std_logic_vector(3 downto 0); -- input vector example&#13;
-  ------------------------------------------------------------------------------&#13;
-  --Insert output ports below&#13;
-    max_o      : out std_logic;                    -- output bit example&#13;
-    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example&#13;
-    );&#13;
-end VHDL_Component;&#13;
-&#13;
---------------------------------------------------------------------------------&#13;
---Complete your VHDL description below&#13;
-architecture type_architecture of VHDL_Component is&#13;
-&#13;
-&#13;
-begin&#13;
-&#13;
-&#13;
-end type_architecture;&#13;
+      <a name="content">--------------------------------------------------------------------------------
+-- HEIG-VD, institute REDS, 1400 Yverdon-les-Bains
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+library ieee;
+  use ieee.std_logic_1164.all;
+  --use ieee.numeric_std.all;
+
+entity VHDL_Component is
+  port(
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    horloge_i  : in  std_logic;                    -- input bit example
+    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    max_o      : out std_logic;                    -- output bit example
+    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
+    );
+end VHDL_Component;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+architecture type_architecture of VHDL_Component is
+
+
+begin
+
+
+end type_architecture;
 </a>
     </tool>
   </lib>
@@ -347,87 +347,28 @@ end TCL_Generic;&#13;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
-    <wire from="(530,100)" to="(530,110)"/>
-    <wire from="(310,120)" to="(360,120)"/>
-    <wire from="(310,120)" to="(310,130)"/>
-    <wire from="(310,130)" to="(310,140)"/>
-    <wire from="(610,90)" to="(610,160)"/>
-    <wire from="(400,100)" to="(400,130)"/>
-    <wire from="(250,130)" to="(250,220)"/>
+    <wire from="(390,200)" to="(440,200)"/>
+    <wire from="(290,190)" to="(290,200)"/>
+    <wire from="(390,190)" to="(390,200)"/>
+    <wire from="(270,170)" to="(270,190)"/>
+    <wire from="(270,170)" to="(440,170)"/>
+    <wire from="(440,170)" to="(440,190)"/>
+    <wire from="(460,180)" to="(760,180)"/>
+    <wire from="(290,190)" to="(390,190)"/>
+    <wire from="(340,210)" to="(440,210)"/>
     <wire from="(210,220)" to="(250,220)"/>
-    <wire from="(250,220)" to="(610,220)"/>
-    <wire from="(610,200)" to="(610,220)"/>
-    <wire from="(540,120)" to="(560,120)"/>
-    <wire from="(610,160)" to="(630,160)"/>
-    <wire from="(610,200)" to="(630,200)"/>
-    <wire from="(440,130)" to="(460,130)"/>
-    <wire from="(530,100)" to="(560,100)"/>
-    <wire from="(530,110)" to="(560,110)"/>
-    <wire from="(580,90)" to="(610,90)"/>
-    <wire from="(500,130)" to="(520,130)"/>
-    <wire from="(400,130)" to="(410,130)"/>
-    <wire from="(690,180)" to="(760,180)"/>
-    <wire from="(310,140)" to="(320,140)"/>
-    <wire from="(300,130)" to="(310,130)"/>
-    <wire from="(350,140)" to="(360,140)"/>
-    <wire from="(390,130)" to="(400,130)"/>
-    <wire from="(250,130)" to="(260,130)"/>
-    <wire from="(400,100)" to="(530,100)"/>
+    <wire from="(270,210)" to="(310,210)"/>
+    <wire from="(270,200)" to="(290,200)"/>
     <comp lib="0" loc="(210,220)" name="Pin">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(300,130)" name="Bit Extender">
-      <a name="in_width" val="32"/>
-      <a name="out_width" val="1"/>
-      <a name="type" val="zero"/>
-    </comp>
-    <comp lib="1" loc="(350,140)" name="NOT Gate"/>
-    <comp lib="1" loc="(390,130)" name="AND Gate">
-      <a name="size" val="30"/>
-    </comp>
-    <comp lib="10" loc="(440,130)" name="Incrementer">
-      <a name="width" val="1"/>
-    </comp>
-    <comp lib="0" loc="(500,130)" name="Bit Extender">
-      <a name="in_width" val="1"/>
-      <a name="out_width" val="30"/>
-      <a name="type" val="zero"/>
-    </comp>
-    <comp lib="0" loc="(520,130)" name="Splitter">
-      <a name="fanout" val="1"/>
-      <a name="incoming" val="30"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="0"/>
-      <a name="bit9" val="0"/>
-      <a name="bit10" val="0"/>
-      <a name="bit11" val="0"/>
-      <a name="bit12" val="0"/>
-      <a name="bit13" val="0"/>
-      <a name="bit14" val="0"/>
-      <a name="bit15" val="0"/>
-      <a name="bit16" val="0"/>
-      <a name="bit17" val="0"/>
-      <a name="bit18" val="0"/>
-      <a name="bit19" val="0"/>
-      <a name="bit20" val="0"/>
-      <a name="bit21" val="0"/>
-      <a name="bit22" val="0"/>
-      <a name="bit23" val="0"/>
-      <a name="bit24" val="0"/>
-      <a name="bit25" val="0"/>
-      <a name="bit26" val="0"/>
-      <a name="bit27" val="0"/>
-      <a name="bit28" val="0"/>
-      <a name="bit29" val="0"/>
-    </comp>
-    <comp lib="0" loc="(580,90)" name="Splitter">
+    <comp lib="0" loc="(760,180)" name="Pin">
       <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(250,220)" name="Splitter">
       <a name="fanout" val="3"/>
       <a name="incoming" val="32"/>
       <a name="bit3" val="2"/>
@@ -460,14 +401,42 @@ end TCL_Generic;&#13;
       <a name="bit30" val="2"/>
       <a name="bit31" val="2"/>
     </comp>
-    <comp lib="1" loc="(690,180)" name="XOR Gate">
-      <a name="width" val="32"/>
+    <comp lib="10" loc="(340,210)" name="Incrementer">
+      <a name="width" val="30"/>
     </comp>
-    <comp lib="0" loc="(760,180)" name="Pin">
+    <comp lib="0" loc="(460,180)" name="Splitter">
       <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="32"/>
+      <a name="bit3" val="2"/>
+      <a name="bit4" val="2"/>
+      <a name="bit5" val="2"/>
+      <a name="bit6" val="2"/>
+      <a name="bit7" val="2"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="2"/>
+      <a name="bit10" val="2"/>
+      <a name="bit11" val="2"/>
+      <a name="bit12" val="2"/>
+      <a name="bit13" val="2"/>
+      <a name="bit14" val="2"/>
+      <a name="bit15" val="2"/>
+      <a name="bit16" val="2"/>
+      <a name="bit17" val="2"/>
+      <a name="bit18" val="2"/>
+      <a name="bit19" val="2"/>
+      <a name="bit20" val="2"/>
+      <a name="bit21" val="2"/>
+      <a name="bit22" val="2"/>
+      <a name="bit23" val="2"/>
+      <a name="bit24" val="2"/>
+      <a name="bit25" val="2"/>
+      <a name="bit26" val="2"/>
+      <a name="bit27" val="2"/>
+      <a name="bit28" val="2"/>
+      <a name="bit29" val="2"/>
+      <a name="bit30" val="2"/>
+      <a name="bit31" val="2"/>
     </comp>
   </circuit>
   <circuit name="PC">
@@ -537,19 +506,19 @@ end TCL_Generic;&#13;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
-    <wire from="(490,430)" to="(550,430)"/>
-    <wire from="(170,170)" to="(230,170)"/>
-    <wire from="(230,370)" to="(350,370)"/>
-    <wire from="(170,330)" to="(350,330)"/>
-    <wire from="(320,230)" to="(550,230)"/>
     <wire from="(230,270)" to="(260,270)"/>
+    <wire from="(490,430)" to="(550,430)"/>
     <wire from="(170,230)" to="(260,230)"/>
+    <wire from="(170,170)" to="(230,170)"/>
     <wire from="(230,170)" to="(230,270)"/>
     <wire from="(230,270)" to="(230,370)"/>
     <wire from="(230,370)" to="(230,470)"/>
+    <wire from="(230,370)" to="(350,370)"/>
+    <wire from="(170,330)" to="(350,330)"/>
     <wire from="(410,330)" to="(550,330)"/>
     <wire from="(230,470)" to="(430,470)"/>
     <wire from="(170,430)" to="(430,430)"/>
+    <wire from="(320,230)" to="(550,230)"/>
     <comp lib="4" loc="(430,400)" name="Register">
       <a name="width" val="32"/>
     </comp>
