@@ -1,0 +1,9 @@
+#Basic arithmetic tests with no forwarding:
+ADDIU $t1, $0, 5
+ADDIU $t2, $0, 10
+BNE $t6, $0, 0 #Should do nothing, used to make sure no
+               #forwarded add instructions work
+SLL $t0, $t0, 0# Another delay instruction
+SRL $t2, $t2, 2
+SLL $t2, $t2, 2
+ADDU $t3, $t1, $t2
