@@ -319,6 +319,8 @@ ADDIU $t2, $0, 10
 BNE $t6, $0, 0 #Should do nothing, used to make sure no
                #forwarded add instructions work
 SLL $t0, $t0, 0# Another delay instruction
+SRL $t2, $t2, 2
+SLL $t2, $t2, 2
 ADDU $t3, $t1, $t2
 </a>
     </comp>
@@ -2113,10 +2115,10 @@ ADDU $t3, $t1, $t2
     <wire from="(140,160)" to="(260,160)"/>
     <wire from="(160,230)" to="(270,230)"/>
     <wire from="(240,70)" to="(240,150)"/>
-    <wire from="(480,210)" to="(520,210)"/>
-    <wire from="(480,130)" to="(520,130)"/>
-    <wire from="(370,280)" to="(370,370)"/>
     <wire from="(480,250)" to="(520,250)"/>
+    <wire from="(480,130)" to="(520,130)"/>
+    <wire from="(480,210)" to="(520,210)"/>
+    <wire from="(370,280)" to="(370,370)"/>
     <wire from="(480,330)" to="(520,330)"/>
     <wire from="(570,370)" to="(570,410)"/>
     <wire from="(260,160)" to="(260,320)"/>
@@ -2142,10 +2144,10 @@ ADDU $t3, $t1, $t2
     <wire from="(270,280)" to="(370,280)"/>
     <wire from="(140,70)" to="(240,70)"/>
     <wire from="(480,180)" to="(520,180)"/>
+    <wire from="(480,340)" to="(520,340)"/>
     <wire from="(480,140)" to="(520,140)"/>
     <wire from="(480,260)" to="(520,260)"/>
     <wire from="(480,220)" to="(520,220)"/>
-    <wire from="(480,340)" to="(520,340)"/>
     <wire from="(670,350)" to="(690,350)"/>
     <wire from="(690,320)" to="(720,320)"/>
     <wire from="(670,260)" to="(700,260)"/>
@@ -2166,12 +2168,12 @@ ADDU $t3, $t1, $t2
     <wire from="(610,280)" to="(610,500)"/>
     <wire from="(580,200)" to="(580,220)"/>
     <wire from="(590,160)" to="(590,500)"/>
+    <wire from="(480,350)" to="(520,350)"/>
     <wire from="(480,270)" to="(520,270)"/>
+    <wire from="(480,310)" to="(520,310)"/>
     <wire from="(480,190)" to="(520,190)"/>
     <wire from="(480,110)" to="(520,110)"/>
     <wire from="(480,150)" to="(520,150)"/>
-    <wire from="(480,310)" to="(520,310)"/>
-    <wire from="(480,350)" to="(520,350)"/>
     <wire from="(570,500)" to="(590,500)"/>
     <wire from="(600,370)" to="(620,370)"/>
     <wire from="(280,400)" to="(310,400)"/>
