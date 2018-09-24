@@ -4,6 +4,8 @@ ADDIU $t2, $0, 10
 BNE $t6, $0, 0 #Should do nothing, used to make sure no
                #forwarded add instructions work
 SLL $t0, $t0, 0# Another delay instruction
-SRL $t2, $t2, 2
-SLL $t2, $t2, 2
+SLL $t5, $t2, 2 #Testing SLL, value in $t5 should be 40 (0x28)
+SRL $t0, $t5, 1 #Testing Forwarding and SRL, value in $t0 should be 20 (0x14)
 ADDU $t3, $t1, $t2
+ADDU $t4, $t3, $0 #Testing M/X Forwarding, value in $t4 should be 15 (0xf)
+AND $t6, $t5, $t2 #Value in $t6 should be 8 (0x8)
