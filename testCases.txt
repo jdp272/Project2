@@ -11,3 +11,4 @@ ADDU $t4, $t3, $0 #Testing M/X Forwarding, value in $t4 should be 15 (0xf)
 ADDU $t0, $t4, $t3 #Testing W/x Forwarding, value in $t0 should be 30 (0x1e)
 AND $t6, $t5, $t2 #Value in $t6 should be 8 (0x8)
 MOVN $t7, $t6, $t2 #Value in $t7 should be 8 because $t6 is not 0
+LUI $t1, 5 #Value in $t1 should be 0x00050000
