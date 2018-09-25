@@ -1,17 +1,67 @@
-#Basic arithmetic tests with no forwarding:
+#Immediate Arithmetic Tests
 ADDIU $t1, $0, 5
 ADDIU $t2, $0, 10
-BNE $t6, $0, 0 #Should do nothing, used to make sure no
-               #forwarded add instructions work
-SLL $t0, $t0, 0# Another delay instruction
-SLL $t5, $t2, 2 #Testing SLL, value in $t5 should be 40 (0x28)
-SRL $t0, $t5, 1 #Testing Forwarding and SRL, value in $t0 should be 20 (0x14)
-ADDU $t3, $t1, $t2
-ADDU $t4, $t3, $0 #Testing M/X Forwarding, value in $t4 should be 15 (0xf)
-ADDU $t0, $t4, $t3 #Testing W/x Forwarding, value in $t0 should be 30 (0x1e)
-AND $t6, $t5, $t2 #Value in $t6 should be 8 (0x8)
-MOVN $t7, $t6, $t2 #Value in $t7 should be 8 because $t6 is not 0
+ANDI $t3, $t2, 13 # $t3 should contain 8
+ORI $t4, $t2, 12 # $t4 should contain 14
+XORI $t5, $t4, 9 # $t5 should contain 7
+SLTI $t6, $t1, 6 # $t6 should contain 1
+SLTI $t2, $t1, 4 # $t2 should contain 0
+SLTIU $t7, $t1, 6 # $t7 should contain 1
+SLTIU $t3, $t1, 5 # $t3 should contain 0
+
+# Resetting temp registers for more testing
+ADDIU $t0, $0, 3
+ADDIU $t1, $0, 10
+ADDU $t5, $0, $0
+ADDU $t6, $0, $0
+ADDU $t7, $0, $0
+
+# Register Arithmetic Tests
+ADDU $t2, $t1, $t0 # $t2 should contain 13
+SUBU $t3, $t2, $t1 # $t3 should contain 3
+AND $t4, $t3, $t2 # $t4 should contain 1
+OR $t5, $t3, $t1 # $t5 should contain 11
+XOR $t6, $t3, $t1 # $t6 should contain 9
+NOR $t7, $t3, $t1 # $t7 should contain 4
+SLT $t0, $t1, $t2 # $t0 should contain 1
+SLTU $t1, $t4, $t7 # $t1 should contain 1
+
+# Resetting temp registers for more testing
+ADDIU $t0, $0, 3
+ADDIU $t1, $0, 10
+ADDU $t5, $0, $0
+ADDU $t6, $0, $0
+ADDU $t7, $0, $0
+
+# Shift Instructions
+SLL $t2, $t0, 2 # $t2 should contain 12 
+SRL $t3, $t0, 1 # $t3 should contain 6
+
+
+# LUI and MOVN Testing
 LUI $t1, 5 #Value in $t1 should be 0x00050000
+MOVN $t7, $t6, $t2 #Value in $t7 should be 8 because $t6 is not 0
 MOVN $t7, $t6, $0 #Value in $t7 should still be 8 because $0 = 0
 MOVZ $t4, $t2, $0 #Value in $t4 should be 8
 MOVZ $t4, $t6, $t2 #Value in $t4 should not change
+
+#Jump instructions - should all do nothing
+J 0
+JR $31 # If JR were implemented, would jump to 0
+JAL 0
+JALR 0
+
+#Branch instructions - also should do nothing
+BNE $t6, $0, 0 
+BEQ $31, $0, 0
+BLEZ $31, $0, 0
+BGEZ $31, $0, 0
+BGTZ $t1, 0
+BLTZ
+
+#Load & Store instructions - also should do nothing
+LW $15, 0(0)
+LB $15, 0(0)
+LBU $15, 0(0)
+SW $15, 0(0)
+SB $15, 0(0)
