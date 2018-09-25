@@ -1,5 +1,8 @@
-ADDIU $t0, $0, 1
-MOVN $t1, $t0, $t1 #t1 should be 0
-MOVN $t2, $t0, $t0 #t2 should be 1
-MOVZ $t3, $t0, $t0 #t3 should be 0
-MOVZ $t4, $t0, $t1 #t4 should be 1
+ADDIU $t0, $0, -4
+ADDIU $t7, $0, 2
+SLT $t1, $t0, $0 #t1 should be 1
+SLT $t2, $0, $t0 #t2 should be 0
+SLT $t3, $0, $t7 #t3 should be 1
+SLTU $t4, $0, $t0 #t4 should be 1
+SLTU $t5, $t7, $t0 #t5 should be 1
+SLTU $t6, $t0, $t7 #t6 should be 0
