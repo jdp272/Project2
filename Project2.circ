@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="2.14.6.1" version="1.0">
+<project source="2.14.6.0" version="1.0">
 This file is intended to be loaded by Logisim-evolution (https://github.com/cs3410/logisim-evolution).
 <lib desc="#Wiring" name="0"/>
   <lib desc="#Gates" name="1"/>
@@ -22,44 +22,44 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/cs34
   <lib desc="#I/O" name="5"/>
   <lib desc="#HDL-IP" name="6">
     <tool name="VHDL Entity">
-      <a name="content">--------------------------------------------------------------------------------&#13;
--- HEIG-VD, institute REDS, 1400 Yverdon-les-Bains&#13;
--- Project :&#13;
--- File    :&#13;
--- Autor   :&#13;
--- Date    :&#13;
---&#13;
---------------------------------------------------------------------------------&#13;
--- Description :&#13;
---&#13;
---------------------------------------------------------------------------------&#13;
-&#13;
-library ieee;&#13;
-  use ieee.std_logic_1164.all;&#13;
-  --use ieee.numeric_std.all;&#13;
-&#13;
-entity VHDL_Component is&#13;
-  port(&#13;
-  ------------------------------------------------------------------------------&#13;
-  --Insert input ports below&#13;
-    horloge_i  : in  std_logic;                    -- input bit example&#13;
-    val_i      : in  std_logic_vector(3 downto 0); -- input vector example&#13;
-  ------------------------------------------------------------------------------&#13;
-  --Insert output ports below&#13;
-    max_o      : out std_logic;                    -- output bit example&#13;
-    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example&#13;
-    );&#13;
-end VHDL_Component;&#13;
-&#13;
---------------------------------------------------------------------------------&#13;
---Complete your VHDL description below&#13;
-architecture type_architecture of VHDL_Component is&#13;
-&#13;
-&#13;
-begin&#13;
-&#13;
-&#13;
-end type_architecture;&#13;
+      <a name="content">--------------------------------------------------------------------------------
+-- HEIG-VD, institute REDS, 1400 Yverdon-les-Bains
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+library ieee;
+  use ieee.std_logic_1164.all;
+  --use ieee.numeric_std.all;
+
+entity VHDL_Component is
+  port(
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    horloge_i  : in  std_logic;                    -- input bit example
+    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    max_o      : out std_logic;                    -- output bit example
+    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
+    );
+end VHDL_Component;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+architecture type_architecture of VHDL_Component is
+
+
+begin
+
+
+end type_architecture;
 </a>
     </tool>
   </lib>
@@ -170,16 +170,16 @@ end TCL_Generic;&#13;
     <wire from="(1320,350)" to="(1320,710)"/>
     <wire from="(1080,550)" to="(1080,660)"/>
     <wire from="(490,600)" to="(490,720)"/>
-    <wire from="(1220,940)" to="(1560,940)"/>
     <wire from="(2090,920)" to="(2120,920)"/>
     <wire from="(1050,1000)" to="(2120,1000)"/>
     <wire from="(1550,400)" to="(1550,420)"/>
     <wire from="(920,610)" to="(920,620)"/>
+    <wire from="(1220,980)" to="(1710,980)"/>
     <wire from="(160,600)" to="(220,600)"/>
     <wire from="(1080,850)" to="(1890,850)"/>
     <wire from="(900,470)" to="(900,730)"/>
     <wire from="(720,560)" to="(720,880)"/>
-    <wire from="(1900,390)" to="(1900,920)"/>
+    <wire from="(1220,940)" to="(1900,940)"/>
     <wire from="(720,560)" to="(780,560)"/>
     <wire from="(1570,400)" to="(1690,400)"/>
     <wire from="(1080,770)" to="(1130,770)"/>
@@ -203,11 +203,13 @@ end TCL_Generic;&#13;
     <wire from="(2230,370)" to="(2270,370)"/>
     <wire from="(1420,420)" to="(1440,420)"/>
     <wire from="(160,600)" to="(160,720)"/>
+    <wire from="(1900,390)" to="(1900,940)"/>
     <wire from="(980,640)" to="(1120,640)"/>
     <wire from="(790,560)" to="(790,610)"/>
     <wire from="(2090,900)" to="(2250,900)"/>
     <wire from="(1080,770)" to="(1080,850)"/>
     <wire from="(590,820)" to="(770,820)"/>
+    <wire from="(1600,610)" to="(1600,960)"/>
     <wire from="(1080,550)" to="(1120,550)"/>
     <wire from="(1980,460)" to="(2150,460)"/>
     <wire from="(2350,920)" to="(2350,1030)"/>
@@ -221,13 +223,13 @@ end TCL_Generic;&#13;
     <wire from="(2150,410)" to="(2150,460)"/>
     <wire from="(900,730)" to="(1130,730)"/>
     <wire from="(1980,840)" to="(1980,850)"/>
-    <wire from="(980,410)" to="(1020,410)"/>
     <wire from="(770,440)" to="(770,660)"/>
+    <wire from="(980,410)" to="(1020,410)"/>
+    <wire from="(1220,960)" to="(1600,960)"/>
     <wire from="(1350,420)" to="(1350,880)"/>
     <wire from="(1080,660)" to="(1080,670)"/>
     <wire from="(1490,290)" to="(1490,430)"/>
     <wire from="(590,480)" to="(590,820)"/>
-    <wire from="(1560,610)" to="(1560,940)"/>
     <wire from="(810,620)" to="(920,620)"/>
     <wire from="(1080,900)" to="(1130,900)"/>
     <wire from="(1390,360)" to="(1390,690)"/>
@@ -235,28 +237,27 @@ end TCL_Generic;&#13;
     <wire from="(1310,390)" to="(1310,570)"/>
     <wire from="(1330,410)" to="(1330,590)"/>
     <wire from="(1490,430)" to="(1500,430)"/>
+    <wire from="(1710,410)" to="(1710,980)"/>
     <wire from="(1920,370)" to="(1990,370)"/>
     <wire from="(1980,920)" to="(1990,920)"/>
     <wire from="(1240,570)" to="(1310,570)"/>
     <wire from="(900,1060)" to="(2400,1060)"/>
     <wire from="(470,600)" to="(490,600)"/>
-    <wire from="(1020,420)" to="(1050,420)"/>
     <wire from="(720,880)" to="(1130,880)"/>
     <wire from="(1080,670)" to="(1980,670)"/>
+    <wire from="(1020,420)" to="(1050,420)"/>
     <wire from="(1280,320)" to="(1310,320)"/>
     <wire from="(550,440)" to="(620,440)"/>
     <wire from="(1050,710)" to="(1050,1000)"/>
     <wire from="(1570,590)" to="(1720,590)"/>
     <wire from="(1240,590)" to="(1330,590)"/>
     <wire from="(1310,390)" to="(1340,390)"/>
-    <wire from="(1560,610)" to="(1720,610)"/>
     <wire from="(780,560)" to="(790,560)"/>
     <wire from="(1450,430)" to="(1450,730)"/>
     <wire from="(890,470)" to="(900,470)"/>
     <wire from="(1890,840)" to="(1980,840)"/>
     <wire from="(1530,420)" to="(1550,420)"/>
     <wire from="(1550,400)" to="(1570,400)"/>
-    <wire from="(1710,410)" to="(1710,960)"/>
     <wire from="(2050,370)" to="(2080,370)"/>
     <wire from="(1590,340)" to="(1590,570)"/>
     <wire from="(1290,340)" to="(1310,340)"/>
@@ -264,14 +265,13 @@ end TCL_Generic;&#13;
     <wire from="(1590,340)" to="(1690,340)"/>
     <wire from="(770,440)" to="(820,440)"/>
     <wire from="(1020,410)" to="(1020,420)"/>
-    <wire from="(1220,960)" to="(1710,960)"/>
     <wire from="(770,660)" to="(1080,660)"/>
     <wire from="(950,550)" to="(950,750)"/>
     <wire from="(890,550)" to="(950,550)"/>
     <wire from="(1040,310)" to="(1040,570)"/>
-    <wire from="(1220,920)" to="(1900,920)"/>
     <wire from="(2150,410)" to="(2170,410)"/>
     <wire from="(1980,460)" to="(1980,670)"/>
+    <wire from="(1600,610)" to="(1720,610)"/>
     <wire from="(780,530)" to="(780,560)"/>
     <wire from="(680,440)" to="(720,440)"/>
     <wire from="(890,570)" to="(930,570)"/>
@@ -298,11 +298,12 @@ end TCL_Generic;&#13;
     <wire from="(1980,410)" to="(1980,460)"/>
     <wire from="(1470,490)" to="(1470,610)"/>
     <wire from="(860,450)" to="(860,510)"/>
+    <wire from="(1220,920)" to="(1380,920)"/>
     <wire from="(860,510)" to="(990,510)"/>
     <wire from="(1280,320)" to="(1280,550)"/>
     <wire from="(770,820)" to="(770,1000)"/>
-    <wire from="(1050,420)" to="(1050,590)"/>
     <wire from="(780,530)" to="(790,530)"/>
+    <wire from="(1050,420)" to="(1050,590)"/>
     <wire from="(920,610)" to="(1000,610)"/>
     <comp lib="10" loc="(980,360)" name="RegisterFile">
       <a name="trigger" val="falling"/>
@@ -359,18 +360,19 @@ end TCL_Generic;&#13;
     <comp loc="(890,530)" name="decode"/>
     <comp loc="(1240,550)" name="IDEX"/>
     <comp lib="10" loc="(550,440)" name="MIPSProgramROM">
-      <a name="contents">ADDIU $t0, $0, 0
-ADDIU $t1, $0, 1
-ADDU $t2, $t0, $t1
-ADDIU $t0, $t1, 0
-ADDIU $t1, $t2, 0
-ADDU $t2, $t1, $t0
-ADDIU $t0, $t1, 0
-ADDIU $t1, $t2, 0
-ADDU $t2, $t1, $t0
-ADDIU $t0, $t1, 0
-ADDIU $t1, $t2, 0
-ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
+      <a name="contents">#Basic arithmetic tests with no forwarding:
+ADDIU $t1, $0, 5
+ADDIU $t2, $0, 10
+BNE $t6, $0, 0 #Should do nothing, used to make sure no
+               #forwarded add instructions work
+SLL $t0, $t0, 0# Another delay instruction
+SLL $t5, $t2, 2 #Testing SLL, value in $t5 should be 40 (0x28)
+SRL $t0, $t5, 1 #Testing Forwarding and SRL, value in $t0 should be 20 (0x14)
+ADDU $t3, $t1, $t2
+ADDU $t4, $t3, $0 #Testing M/X Forwarding, value in $t4 should be 15 (0xf)
+ADDU $t0, $t4, $t3 #Testing W/x Forwarding, value in $t0 should be 30 (0x1e)
+AND $t6, $t5, $t2 #Value in $t6 should be 8 (0x8)
+MOVN $t7, $t6, $t2 #Value in $t7 should be 8 because $t6 is not 0
 </a>
     </comp>
     <comp lib="4" loc="(620,410)" name="Register">
@@ -635,6 +637,7 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <wire from="(630,1270)" to="(630,1280)"/>
+    <wire from="(560,640)" to="(560,650)"/>
     <wire from="(500,250)" to="(560,250)"/>
     <wire from="(560,800)" to="(610,800)"/>
     <wire from="(980,1280)" to="(1100,1280)"/>
@@ -644,6 +647,7 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <wire from="(440,180)" to="(560,180)"/>
     <wire from="(520,370)" to="(560,370)"/>
     <wire from="(460,780)" to="(460,800)"/>
+    <wire from="(460,610)" to="(570,610)"/>
     <wire from="(610,290)" to="(610,320)"/>
     <wire from="(420,1620)" to="(420,1650)"/>
     <wire from="(370,210)" to="(370,240)"/>
@@ -651,6 +655,7 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <wire from="(630,950)" to="(630,970)"/>
     <wire from="(480,1130)" to="(520,1130)"/>
     <wire from="(580,210)" to="(600,210)"/>
+    <wire from="(550,660)" to="(570,660)"/>
     <wire from="(610,320)" to="(630,320)"/>
     <wire from="(560,1470)" to="(580,1470)"/>
     <wire from="(610,1120)" to="(630,1120)"/>
@@ -665,7 +670,6 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <wire from="(480,1280)" to="(480,1320)"/>
     <wire from="(740,1280)" to="(960,1280)"/>
     <wire from="(300,1660)" to="(450,1660)"/>
-    <wire from="(370,600)" to="(960,600)"/>
     <wire from="(460,1180)" to="(460,1230)"/>
     <wire from="(440,1260)" to="(520,1260)"/>
     <wire from="(280,1230)" to="(280,1610)"/>
@@ -688,16 +692,24 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <wire from="(610,210)" to="(630,210)"/>
     <wire from="(660,340)" to="(680,340)"/>
     <wire from="(440,790)" to="(440,950)"/>
+    <wire from="(370,600)" to="(400,600)"/>
     <wire from="(680,270)" to="(710,270)"/>
     <wire from="(600,110)" to="(630,110)"/>
+    <wire from="(420,630)" to="(570,630)"/>
     <wire from="(480,450)" to="(630,450)"/>
     <wire from="(460,1230)" to="(460,1270)"/>
+    <wire from="(420,640)" to="(560,640)"/>
     <wire from="(450,1630)" to="(590,1630)"/>
     <wire from="(360,1030)" to="(630,1030)"/>
+    <wire from="(420,650)" to="(550,650)"/>
     <wire from="(290,560)" to="(290,750)"/>
     <wire from="(320,1120)" to="(320,1240)"/>
+    <wire from="(560,650)" to="(570,650)"/>
+    <wire from="(550,650)" to="(550,660)"/>
     <wire from="(610,470)" to="(610,480)"/>
     <wire from="(740,280)" to="(790,280)"/>
+    <wire from="(620,640)" to="(670,640)"/>
+    <wire from="(420,660)" to="(540,660)"/>
     <wire from="(460,1180)" to="(580,1180)"/>
     <wire from="(540,1130)" to="(580,1130)"/>
     <wire from="(300,360)" to="(540,360)"/>
@@ -738,6 +750,7 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <wire from="(520,270)" to="(520,300)"/>
     <wire from="(400,990)" to="(640,990)"/>
     <wire from="(500,1370)" to="(500,1400)"/>
+    <wire from="(400,600)" to="(960,600)"/>
     <wire from="(500,1400)" to="(500,1480)"/>
     <wire from="(460,210)" to="(560,210)"/>
     <wire from="(300,220)" to="(340,220)"/>
@@ -757,6 +770,7 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <wire from="(480,230)" to="(630,230)"/>
     <wire from="(350,1220)" to="(350,1260)"/>
     <wire from="(330,1280)" to="(330,1320)"/>
+    <wire from="(420,610)" to="(430,610)"/>
     <wire from="(540,160)" to="(610,160)"/>
     <wire from="(440,1160)" to="(580,1160)"/>
     <wire from="(300,1290)" to="(310,1290)"/>
@@ -764,12 +778,14 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <wire from="(400,810)" to="(480,810)"/>
     <wire from="(510,1640)" to="(590,1640)"/>
     <wire from="(500,350)" to="(630,350)"/>
+    <wire from="(540,660)" to="(540,670)"/>
     <wire from="(600,240)" to="(600,250)"/>
     <wire from="(600,320)" to="(600,330)"/>
     <wire from="(610,810)" to="(610,820)"/>
     <wire from="(610,970)" to="(610,980)"/>
     <wire from="(1030,1300)" to="(1030,1640)"/>
     <wire from="(390,1630)" to="(440,1630)"/>
+    <wire from="(420,620)" to="(470,620)"/>
     <wire from="(680,1480)" to="(870,1480)"/>
     <wire from="(400,1210)" to="(580,1210)"/>
     <wire from="(310,830)" to="(360,830)"/>
@@ -838,6 +854,7 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <wire from="(460,1330)" to="(460,1520)"/>
     <wire from="(370,240)" to="(500,240)"/>
     <wire from="(460,1270)" to="(460,1330)"/>
+    <wire from="(500,620)" to="(570,620)"/>
     <wire from="(600,100)" to="(600,110)"/>
     <wire from="(310,1370)" to="(500,1370)"/>
     <wire from="(500,240)" to="(500,250)"/>
@@ -900,6 +917,7 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <wire from="(440,180)" to="(440,290)"/>
     <wire from="(300,1240)" to="(320,1240)"/>
     <wire from="(580,70)" to="(610,70)"/>
+    <wire from="(540,670)" to="(570,670)"/>
     <wire from="(600,330)" to="(630,330)"/>
     <wire from="(400,1210)" to="(400,1380)"/>
     <wire from="(370,560)" to="(370,600)"/>
@@ -1244,6 +1262,54 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
       <a name="bit1" val="2"/>
       <a name="bit2" val="1"/>
       <a name="bit3" val="0"/>
+    </comp>
+    <comp lib="0" loc="(400,600)" name="Splitter">
+      <a name="fanout" val="6"/>
+      <a name="incoming" val="32"/>
+      <a name="appear" val="right"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+      <a name="bit9" val="none"/>
+      <a name="bit10" val="none"/>
+      <a name="bit11" val="none"/>
+      <a name="bit12" val="none"/>
+      <a name="bit13" val="none"/>
+      <a name="bit14" val="none"/>
+      <a name="bit15" val="none"/>
+      <a name="bit16" val="none"/>
+      <a name="bit17" val="none"/>
+      <a name="bit18" val="none"/>
+      <a name="bit19" val="none"/>
+      <a name="bit20" val="none"/>
+      <a name="bit21" val="none"/>
+      <a name="bit22" val="none"/>
+      <a name="bit23" val="none"/>
+      <a name="bit24" val="none"/>
+      <a name="bit25" val="none"/>
+      <a name="bit26" val="5"/>
+      <a name="bit27" val="4"/>
+      <a name="bit28" val="3"/>
+      <a name="bit29" val="2"/>
+      <a name="bit30" val="1"/>
+      <a name="bit31" val="0"/>
+    </comp>
+    <comp lib="1" loc="(460,610)" name="NOT Gate"/>
+    <comp lib="1" loc="(500,620)" name="NOT Gate"/>
+    <comp lib="1" loc="(620,640)" name="AND Gate">
+      <a name="inputs" val="6"/>
+    </comp>
+    <comp lib="0" loc="(670,640)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="LUI"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
   <circuit name="CtrlMEMWB">
@@ -1844,6 +1910,7 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <wire from="(270,460)" to="(350,460)"/>
     <wire from="(410,450)" to="(410,530)"/>
     <wire from="(370,440)" to="(500,440)"/>
+    <wire from="(370,380)" to="(500,380)"/>
     <wire from="(370,450)" to="(410,450)"/>
     <wire from="(220,460)" to="(270,460)"/>
     <comp lib="0" loc="(220,460)" name="Pin">
@@ -2313,78 +2380,78 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <wire from="(710,340)" to="(710,670)"/>
+    <wire from="(420,340)" to="(420,730)"/>
     <wire from="(880,300)" to="(880,440)"/>
     <wire from="(670,510)" to="(720,510)"/>
+    <wire from="(480,220)" to="(480,490)"/>
+    <wire from="(480,220)" to="(530,220)"/>
     <wire from="(210,210)" to="(210,730)"/>
     <wire from="(210,210)" to="(260,210)"/>
     <wire from="(210,730)" to="(260,730)"/>
     <wire from="(960,280)" to="(1060,280)"/>
+    <wire from="(820,690)" to="(860,690)"/>
+    <wire from="(870,260)" to="(910,260)"/>
     <wire from="(670,590)" to="(770,590)"/>
     <wire from="(460,610)" to="(460,690)"/>
     <wire from="(810,110)" to="(810,260)"/>
-    <wire from="(790,260)" to="(810,260)"/>
-    <wire from="(880,300)" to="(910,300)"/>
-    <wire from="(500,340)" to="(510,340)"/>
-    <wire from="(320,690)" to="(460,690)"/>
-    <wire from="(460,420)" to="(460,470)"/>
-    <wire from="(520,400)" to="(530,400)"/>
-    <wire from="(530,330)" to="(540,330)"/>
-    <wire from="(520,440)" to="(530,440)"/>
-    <wire from="(590,340)" to="(710,340)"/>
-    <wire from="(830,440)" to="(880,440)"/>
-    <wire from="(820,570)" to="(940,570)"/>
-    <wire from="(750,420)" to="(750,550)"/>
-    <wire from="(140,170)" to="(260,170)"/>
-    <wire from="(140,690)" to="(260,690)"/>
-    <wire from="(500,260)" to="(500,340)"/>
-    <wire from="(130,340)" to="(420,340)"/>
-    <wire from="(820,860)" to="(1030,860)"/>
-    <wire from="(820,690)" to="(820,860)"/>
-    <wire from="(750,550)" to="(770,550)"/>
-    <wire from="(210,730)" to="(210,830)"/>
-    <wire from="(750,420)" to="(780,420)"/>
-    <wire from="(130,470)" to="(460,470)"/>
-    <wire from="(480,170)" to="(480,220)"/>
-    <wire from="(710,280)" to="(710,340)"/>
-    <wire from="(460,470)" to="(460,530)"/>
-    <wire from="(530,340)" to="(540,340)"/>
-    <wire from="(520,410)" to="(530,410)"/>
-    <wire from="(420,340)" to="(420,730)"/>
-    <wire from="(480,220)" to="(480,490)"/>
-    <wire from="(480,220)" to="(530,220)"/>
-    <wire from="(820,690)" to="(860,690)"/>
-    <wire from="(870,260)" to="(910,260)"/>
     <wire from="(920,610)" to="(920,690)"/>
     <wire from="(580,420)" to="(750,420)"/>
+    <wire from="(790,260)" to="(810,260)"/>
     <wire from="(420,730)" to="(510,730)"/>
     <wire from="(800,690)" to="(820,690)"/>
     <wire from="(920,610)" to="(940,610)"/>
     <wire from="(500,260)" to="(530,260)"/>
     <wire from="(590,240)" to="(610,240)"/>
     <wire from="(320,170)" to="(480,170)"/>
+    <wire from="(880,300)" to="(910,300)"/>
     <wire from="(890,690)" to="(920,690)"/>
+    <wire from="(500,340)" to="(510,340)"/>
+    <wire from="(320,690)" to="(460,690)"/>
+    <wire from="(460,420)" to="(460,470)"/>
     <wire from="(420,340)" to="(500,340)"/>
     <wire from="(720,460)" to="(720,510)"/>
     <wire from="(670,710)" to="(750,710)"/>
+    <wire from="(520,400)" to="(530,400)"/>
+    <wire from="(530,330)" to="(540,330)"/>
+    <wire from="(520,440)" to="(530,440)"/>
     <wire from="(520,420)" to="(530,420)"/>
     <wire from="(530,350)" to="(540,350)"/>
     <wire from="(990,590)" to="(1070,590)"/>
+    <wire from="(590,340)" to="(710,340)"/>
+    <wire from="(830,440)" to="(880,440)"/>
+    <wire from="(820,570)" to="(940,570)"/>
     <wire from="(690,240)" to="(740,240)"/>
+    <wire from="(750,420)" to="(750,550)"/>
     <wire from="(460,530)" to="(510,530)"/>
     <wire from="(460,570)" to="(510,570)"/>
     <wire from="(460,610)" to="(510,610)"/>
     <wire from="(460,690)" to="(510,690)"/>
+    <wire from="(140,170)" to="(260,170)"/>
+    <wire from="(140,690)" to="(260,690)"/>
     <wire from="(810,110)" to="(1060,110)"/>
     <wire from="(720,460)" to="(780,460)"/>
     <wire from="(710,670)" to="(750,670)"/>
+    <wire from="(500,260)" to="(500,340)"/>
+    <wire from="(130,340)" to="(420,340)"/>
     <wire from="(460,420)" to="(500,420)"/>
+    <wire from="(820,860)" to="(1030,860)"/>
     <wire from="(570,510)" to="(590,510)"/>
     <wire from="(570,590)" to="(590,590)"/>
     <wire from="(570,710)" to="(590,710)"/>
     <wire from="(480,490)" to="(510,490)"/>
+    <wire from="(820,690)" to="(820,860)"/>
+    <wire from="(750,550)" to="(770,550)"/>
+    <wire from="(210,730)" to="(210,830)"/>
     <wire from="(710,280)" to="(740,280)"/>
+    <wire from="(750,420)" to="(780,420)"/>
     <wire from="(810,260)" to="(840,260)"/>
     <wire from="(460,530)" to="(460,570)"/>
+    <wire from="(130,470)" to="(460,470)"/>
+    <wire from="(480,170)" to="(480,220)"/>
+    <wire from="(710,280)" to="(710,340)"/>
+    <wire from="(460,470)" to="(460,530)"/>
+    <wire from="(530,340)" to="(540,340)"/>
+    <wire from="(520,410)" to="(530,410)"/>
     <wire from="(520,430)" to="(530,430)"/>
     <wire from="(530,320)" to="(540,320)"/>
     <wire from="(530,360)" to="(540,360)"/>
@@ -2505,6 +2572,135 @@ ADDIU $v0, $t2, 0 #Register $v0, or register 2, should now contain 3
     <comp lib="0" loc="(210,830)" name="Pin">
       <a name="facing" val="north"/>
       <a name="label" val="Clk"/>
+    </comp>
+  </circuit>
+  <circuit name="LUI">
+    <a name="circuit" val="LUI"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(420,220)" to="(470,220)"/>
+    <wire from="(460,260)" to="(460,270)"/>
+    <wire from="(350,150)" to="(470,150)"/>
+    <wire from="(370,270)" to="(370,280)"/>
+    <wire from="(450,250)" to="(450,270)"/>
+    <wire from="(360,290)" to="(470,290)"/>
+    <wire from="(440,240)" to="(440,270)"/>
+    <wire from="(370,170)" to="(470,170)"/>
+    <wire from="(350,270)" to="(350,300)"/>
+    <wire from="(440,240)" to="(470,240)"/>
+    <wire from="(430,230)" to="(430,270)"/>
+    <wire from="(450,270)" to="(460,270)"/>
+    <wire from="(430,270)" to="(440,270)"/>
+    <wire from="(410,270)" to="(420,270)"/>
+    <wire from="(390,270)" to="(400,270)"/>
+    <wire from="(460,260)" to="(470,260)"/>
+    <wire from="(220,320)" to="(300,320)"/>
+    <wire from="(350,270)" to="(360,270)"/>
+    <wire from="(370,270)" to="(380,270)"/>
+    <wire from="(420,220)" to="(420,270)"/>
+    <wire from="(390,190)" to="(470,190)"/>
+    <wire from="(410,210)" to="(410,270)"/>
+    <wire from="(400,200)" to="(400,270)"/>
+    <wire from="(410,210)" to="(470,210)"/>
+    <wire from="(490,140)" to="(540,140)"/>
+    <wire from="(240,290)" to="(290,290)"/>
+    <wire from="(350,300)" to="(470,300)"/>
+    <wire from="(360,270)" to="(360,290)"/>
+    <wire from="(390,190)" to="(390,270)"/>
+    <wire from="(240,290)" to="(240,310)"/>
+    <wire from="(360,160)" to="(470,160)"/>
+    <wire from="(370,280)" to="(470,280)"/>
+    <wire from="(430,230)" to="(470,230)"/>
+    <wire from="(380,180)" to="(380,270)"/>
+    <wire from="(370,170)" to="(370,270)"/>
+    <wire from="(380,180)" to="(470,180)"/>
+    <wire from="(450,250)" to="(470,250)"/>
+    <wire from="(240,250)" to="(240,290)"/>
+    <wire from="(360,160)" to="(360,270)"/>
+    <wire from="(320,310)" to="(470,310)"/>
+    <wire from="(200,320)" to="(220,320)"/>
+    <wire from="(440,270)" to="(450,270)"/>
+    <wire from="(420,270)" to="(430,270)"/>
+    <wire from="(400,270)" to="(410,270)"/>
+    <wire from="(460,270)" to="(470,270)"/>
+    <wire from="(280,250)" to="(290,250)"/>
+    <wire from="(340,270)" to="(350,270)"/>
+    <wire from="(360,270)" to="(370,270)"/>
+    <wire from="(380,270)" to="(390,270)"/>
+    <wire from="(240,250)" to="(250,250)"/>
+    <wire from="(400,200)" to="(470,200)"/>
+    <wire from="(350,150)" to="(350,270)"/>
+    <comp lib="0" loc="(490,140)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="17"/>
+      <a name="incoming" val="32"/>
+      <a name="bit17" val="16"/>
+      <a name="bit18" val="16"/>
+      <a name="bit19" val="16"/>
+      <a name="bit20" val="16"/>
+      <a name="bit21" val="16"/>
+      <a name="bit22" val="16"/>
+      <a name="bit23" val="16"/>
+      <a name="bit24" val="16"/>
+      <a name="bit25" val="16"/>
+      <a name="bit26" val="16"/>
+      <a name="bit27" val="16"/>
+      <a name="bit28" val="16"/>
+      <a name="bit29" val="16"/>
+      <a name="bit30" val="16"/>
+      <a name="bit31" val="16"/>
+    </comp>
+    <comp lib="0" loc="(200,320)" name="Pin">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(300,320)" name="Splitter">
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="0"/>
+      <a name="bit9" val="0"/>
+      <a name="bit10" val="0"/>
+      <a name="bit11" val="0"/>
+      <a name="bit12" val="0"/>
+      <a name="bit13" val="0"/>
+      <a name="bit14" val="0"/>
+      <a name="bit15" val="0"/>
+    </comp>
+    <comp lib="0" loc="(220,320)" name="Splitter">
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+      <a name="bit9" val="none"/>
+      <a name="bit10" val="none"/>
+      <a name="bit11" val="none"/>
+      <a name="bit12" val="none"/>
+      <a name="bit13" val="none"/>
+      <a name="bit14" val="none"/>
+      <a name="bit15" val="none"/>
+    </comp>
+    <comp lib="1" loc="(340,270)" name="AND Gate"/>
+    <comp lib="1" loc="(280,250)" name="NOT Gate"/>
+    <comp lib="0" loc="(540,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
 </project>
