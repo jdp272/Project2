@@ -5,16 +5,19 @@ ANDI $t3, $t2, 13 # $t3 should contain 8
 ORI $t4, $t2, 12 # $t4 should contain 14
 XORI $t5, $t4, 9 # $t5 should contain 7
 SLTI $t6, $t1, 6 # $t6 should contain 1
-SLTI $t2, $t1, 4 # $t2 should contain 0
-SLTIU $t7, $t1, 6 # $t7 should contain 1
-SLTIU $t3, $t1, 5 # $t3 should contain 0
+SLTI $t7, $t1, 4 # $t7 should contain 0
+SLTIU $t2, $t1, 6 # $t2 should contain 1
+SLTIU $t0, $t1, 5 # $t0 should contain 0
 
 # Resetting temp registers for more testing
 ADDIU $t0, $0, 3
 ADDIU $t1, $0, 10
-ADDU $t5, $0, $0
-ADDU $t6, $0, $0
-ADDU $t7, $0, $0
+ADDIU $t2, $0, 0
+ADDIU $t3, $0, 0
+ADDIU $t4, $0, 0
+ADDIU $t5, $0, 0
+ADDIU $t6, $0, 0
+ADDIU $t7, $0, 0
 
 # Register Arithmetic Tests
 ADDU $t2, $t1, $t0 # $t2 should contain 13
@@ -22,34 +25,71 @@ SUBU $t3, $t2, $t1 # $t3 should contain 3
 AND $t4, $t3, $t2 # $t4 should contain 1
 OR $t5, $t3, $t1 # $t5 should contain 11
 XOR $t6, $t3, $t1 # $t6 should contain 9
-NOR $t7, $t3, $t1 # $t7 should contain 4
+NOR $t7, $t3, $t1 # $t7 should contain 0xfffffff4
 SLT $t0, $t1, $t2 # $t0 should contain 1
 SLTU $t1, $t4, $t7 # $t1 should contain 1
 
 # Resetting temp registers for more testing
 ADDIU $t0, $0, 3
 ADDIU $t1, $0, 10
-ADDU $t5, $0, $0
-ADDU $t6, $0, $0
-ADDU $t7, $0, $0
+ADDIU $t2, $0, 0
+ADDIU $t3, $0, 0
+ADDIU $t4, $0, 0
+ADDIU $t5, $0, 0
+ADDIU $t6, $0, 0
+ADDIU $t7, $0, 30
 
 # Shift Instructions
 SLL $t2, $t0, 2 # $t2 should contain 12 
-SRL $t3, $t0, 1 # $t3 should contain 6
+SRL $t3, $t2, 1 # $t3 should contain 6
+SLLV $t4, $t0, $t7 # $t4 should contain 0xc0000000
+SRA $t5, $t4, 2 # $t5 should contain 0xf0000000
+SRLV $t6, $t2, $t0 # $t6 should contain 1
+SRAV $t7, $t4, $t6 # $t7 should contain 0xe0000000
 
+# Resetting temp registers for more testing
+ADDIU $t0, $0, 3
+ADDIU $t1, $0, 10
+ADDIU $t2, $0, 15
+ADDIU $t3, $0, 0
+ADDIU $t4, $0, 0
+ADDIU $t5, $0, 0
+ADDIU $t6, $0, 0
+ADDIU $t7, $0, 0
 
 # LUI and MOVN Testing
 LUI $t1, 5 #Value in $t1 should be 0x00050000
-MOVN $t7, $t6, $t2 #Value in $t7 should be 8 because $t6 is not 0
-MOVN $t7, $t6, $0 #Value in $t7 should still be 8 because $0 = 0
-MOVZ $t4, $t2, $0 #Value in $t4 should be 8
-MOVZ $t4, $t6, $t2 #Value in $t4 should not change
+MOVN $t3, $t2, $t0 # $t3 should contain 15 because $t0 is not 0
+MOVN $t4, $t2, $0 # $t4 should contain 0 because $0 = 0
+MOVZ $t5, $t0, $0 # $t5 should contain 3 because $0 = 0
+MOVZ $t6, $t2, $t2 # $t6 should contain 0 because $t1 is not 0 
+
+# Resetting temp registers for more testing
+ADDIU $t0, $0, 3
+ADDIU $t1, $0, 10
+ADDIU $t2, $0, 0
+ADDIU $t3, $0, 0
+ADDIU $t4, $0, 0
+ADDIU $t5, $0, 0
+ADDIU $t6, $0, 0
+ADDIU $t7, $0, 0
 
 #Jump instructions - should all do nothing
 J 0
+JAL 8 # $31 should contain 0, not 8
 JR $31 # If JR were implemented, would jump to 0
-JAL 0
 JALR 0
+
+# Resetting temp registers for more testing
+ADDIU $t0, $0, 3
+ADDIU $t1, $0, 10
+ADDIU $t2, $0, 0
+ADDIU $t3, $0, 0
+ADDIU $t4, $0, 0
+ADDIU $t5, $0, 0
+ADDIU $t6, $0, 0
+ADDIU $t7, $0, 0
+SLL $t0, $t0, 31
 
 #Branch instructions - also should do nothing
 BNE $t6, $0, 0 
@@ -57,11 +97,21 @@ BEQ $31, $0, 0
 BLEZ $31, $0, 0
 BGEZ $31, $0, 0
 BGTZ $t1, 0
-BLTZ
+BLTZ $t0, 0
+
+# Resetting temp registers for more testing
+ADDIU $t0, $0, 3
+ADDIU $t1, $0, 10
+ADDIU $t2, $0, 0
+ADDIU $t3, $0, 0
+ADDIU $t4, $0, 0
+ADDIU $t5, $0, 0
+ADDIU $t6, $0, 0
+ADDIU $t7, $0, 0
 
 #Load & Store instructions - also should do nothing
-LW $15, 0(0)
-LB $15, 0(0)
-LBU $15, 0(0)
-SW $15, 0(0)
-SB $15, 0(0)
+LW $t0, 0(0)
+LB $t1, 0(0)
+LBU $t2, 0(0)
+SW $t3, 0(0)
+SB $t4, 0(0)
