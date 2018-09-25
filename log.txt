@@ -1,0 +1,278 @@
+commit d3b6018b9636fa0949c9533f089d0f35684e95cd
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Tue Sep 25 14:12:33 2018 -0400
+
+    fixed Less Than logic
+
+commit 7948c22e88be44f112249bde8e7d5c253f90538f
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Tue Sep 25 01:21:06 2018 -0400
+
+    moved WB register for aesthetic
+
+commit 7c680b9905e1724161af27a4a219fc666ceb8cfe
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Tue Sep 25 01:19:10 2018 -0400
+
+    Design Doc
+
+commit d52e38f31cf3daca49a14d7b05f2ef4a28daf281
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Mon Sep 24 23:51:31 2018 -0400
+
+    fixing Compare
+
+commit f3996733b2d6324b93c69c5312e467ad0a60e07a
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Mon Sep 24 23:48:24 2018 -0400
+
+    Re-organizing test cases pt. 1
+
+commit b021ed371b560cb48767c4e519fb1b45d04253af
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Mon Sep 24 22:22:36 2018 -0400
+
+    Mixed up syntax for MOVN and MOVZ commands
+
+commit 7c11dc349e85160b9146d8d1e468457f143c4146
+Merge: b7deb68 d524700
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Mon Sep 24 22:12:58 2018 -0400
+
+    Merge branch 'master' of https://github.com/jdp272/Project2
+
+commit b7deb683708242222d75a97bd58b28b8d9f6600a
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Mon Sep 24 22:12:08 2018 -0400
+
+    Added Move Logic
+
+commit d524700dc0e4e1ac58feaff234838ec6780c8a9e
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Mon Sep 24 22:06:42 2018 -0400
+
+    Added MOVN and MOVZ test cases
+
+commit 10b398e9fce1df8d121acbb825f5a4bcee8b93b4
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Mon Sep 24 21:21:34 2018 -0400
+
+    Added LUI test case
+
+commit 3e0981662e607d37ecc5b890f639989238cc82b5
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Mon Sep 24 21:16:57 2018 -0400
+
+    Completed LUI subcircuit addition
+
+commit e0316123c4b489359a0ff2c2a4ad359cb1bbcf4d
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Mon Sep 24 20:58:15 2018 -0400
+
+    Added an LUI signal to CNTRLIDEX and a LUI subcircuit for LUI instruction
+
+commit f4379f7175d5171f2d3f2d6a9f802aa8e48efbbf
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Mon Sep 24 19:00:30 2018 -0400
+
+    More test cases
+
+commit 912000ce3a7337f4a381e85ef45c7a3d5e49323a
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Mon Sep 24 16:30:40 2018 -0400
+
+    Added test cases and comments
+
+commit da300e87defe057636f265331a269e548e0c4bfb
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Mon Sep 24 13:59:35 2018 -0400
+
+    invertedRegisterFile
+
+commit e732dd8f37624670da265668f6ff1b8cc9c5a16a
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Mon Sep 24 13:37:18 2018 -0400
+
+    save
+
+commit 6216cf6b65d7726c53142ac894209a7b3c9c166b
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Mon Sep 24 13:18:32 2018 -0400
+
+    forwardingLogic
+
+commit 30e993d83a22e40c8d8ac9d7846cc4746ba6f0b8
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Mon Sep 24 11:51:41 2018 -0400
+
+    removed duplicated components
+
+commit a2adf069206d5671fe1e2e6e7eb1001530fb92c1
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Sun Sep 23 20:56:32 2018 -0400
+
+    switched A & B
+
+commit 52176e9b8b7dd2110160cadb2f88f52a73aab5c8
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Sun Sep 23 20:05:06 2018 -0400
+
+    Added basic test case document
+
+commit bc406c060cb93823548826e643d7284888c14a12
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Sun Sep 23 20:04:12 2018 -0400
+
+    Moved wires around
+
+commit 2c9e236a0798bb49374186d75d1a9170a849ca7e
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Sun Sep 23 19:56:39 2018 -0400
+
+    Updates to Forwarding
+    
+    Made Changes to Forward subcircuit to achieve very basic functionality
+
+commit 2b7233448173cbdfa7140850fc7bfaba78d1a261
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Sun Sep 23 19:41:15 2018 -0400
+
+    Fib(4)
+
+commit fb4ddd5c0313021315110ab60127da2c3bd92218
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Sun Sep 23 19:35:03 2018 -0400
+
+    Added a comment
+
+commit 2bcbb2ff9841429ba1b57766bf19cb445559c8ce
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Sun Sep 23 19:09:42 2018 -0400
+
+    Forwarding
+
+commit 01b3d38979e527e887dcfbfab1f7193d828a1dbb
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Sun Sep 23 18:37:52 2018 -0400
+
+    Fixed wiring
+
+commit 735d8e7d3bf33a41ea8191e6abba566172618a80
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Sun Sep 23 17:40:51 2018 -0400
+
+    Groundword for forwarding control logic
+
+commit 28cf94e85c8aa7f3e0ec635f2fe5b822808091df
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Sun Sep 23 14:11:43 2018 -0400
+
+    Fixed incrementer
+
+commit a16abf67a96284bae84d0c237afb7e1a98562036
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Sun Sep 23 13:58:10 2018 -0400
+
+    Execution, Decode, write back
+
+commit f397e167aaf6165e883b31049ded26bebd933a1a
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Sun Sep 23 12:58:49 2018 -0400
+
+    save checkpoint
+
+commit d03a3481d5c025502dfeee4143e661e0aea35148
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Thu Sep 20 19:46:31 2018 -0400
+
+    Added muxesand wires in preparation for forwarding logic
+
+commit 26ac9ba0052b3ce80cf009500b707a016331cc38
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Thu Sep 20 19:17:18 2018 -0400
+
+    Added a way to increment 4 using 1 incrementer
+
+commit d82b9c2392e46823969469c844aa925283862e19
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Thu Sep 20 14:47:35 2018 -0400
+
+    Opcode&Clock update
+
+commit 2cf9d81517c08545aef4a268cd8cf8d3309c62dc
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Thu Sep 20 14:16:29 2018 -0400
+
+    update TODO
+
+commit 200ec54b64e4697a0234ace4cd508dbcee6c5a4b
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Tue Sep 18 17:51:16 2018 -0400
+
+    Opcode Table
+
+commit d014645b5b808578294215a64f2eb01a6d91fc90
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Tue Sep 18 17:48:31 2018 -0400
+
+    ALU Ctrl
+
+commit 4143aa40e657f2f02dfc33028898555c321119b4
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Tue Sep 18 17:32:46 2018 -0400
+
+    Fibonacchi Program in assembly code
+
+commit 71eb1a6a8687967403df9de6d00a6eb62b0eebec
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Tue Sep 18 16:40:49 2018 -0400
+
+    Combined temporary registers into one subcircuit
+
+commit 011973aeb18f4e7f2b684104cda4ab23bdf65b67
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Sat Sep 15 18:31:12 2018 -0400
+
+    Added PC reset
+
+commit 26184d8efbb2f60e6383cd1e8a83e5a9e2736bc6
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Sat Sep 15 18:15:18 2018 -0400
+
+    added PC
+
+commit bcbdc24d4864a70170c8398804845dc556d7a933
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Tue Sep 11 17:41:40 2018 -0400
+
+    TODO
+
+commit b02455eebe687b6aaef26b5c4c3a8270a336983d
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Tue Sep 11 17:39:38 2018 -0400
+
+    CPU outline
+
+commit 0537e8eb629d1a0bfc93a3315a3410f642118d7a
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Tue Sep 11 16:48:13 2018 -0400
+
+    Test commit
+
+commit 95f6e2c995fc37382e1bfea8125c41cf17b60061
+Author: andresantonsson <andres.antonsson@gmail.com>
+Date:   Tue Sep 11 16:37:48 2018 -0400
+
+    Testing out version control
+
+commit ae13041ff942950a92ed781f6e0a14d1d2f50902
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Tue Sep 11 16:30:54 2018 -0400
+
+    Placeholder
+
+commit b789f95a9066a35e02642a69ce1b39c090c26164
+Author: Jesse <35843968+jdp272@users.noreply.github.com>
+Date:   Tue Sep 11 16:24:46 2018 -0400
+
+    Initial commit
