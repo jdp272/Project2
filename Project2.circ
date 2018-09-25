@@ -384,19 +384,11 @@ end TCL_Generic;&#13;
     <comp loc="(890,530)" name="decode"/>
     <comp loc="(1240,550)" name="IDEX"/>
     <comp lib="10" loc="(550,440)" name="MIPSProgramROM">
-      <a name="contents">#Basic arithmetic tests with no forwarding:
-ADDIU $t1, $0, 5
-ADDIU $t2, $0, 10
-BNE $t6, $0, 0 #Should do nothing, used to make sure no
-               #forwarded add instructions work
-SLL $t0, $t0, 0# Another delay instruction
-SLL $t5, $t2, 2 #Testing SLL, value in $t5 should be 40 (0x28)
-SRL $t0, $t5, 1 #Testing Forwarding and SRL, value in $t0 should be 20 (0x14)
-ADDU $t3, $t1, $t2
-ADDU $t4, $t3, $0 #Testing M/X Forwarding, value in $t4 should be 15 (0xf)
-ADDU $t0, $t4, $t3 #Testing W/x Forwarding, value in $t0 should be 30 (0x1e)
-AND $t6, $t5, $t2 #Value in $t6 should be 8 (0x8)
-MOVN $t7, $t6, $t2 #Value in $t7 should be 8 because $t6 is not 0
+      <a name="contents">ADDIU $t0, $0, 1
+MOVN $t1, $t0, $t1 #t1 should be 0
+MOVN $t2, $t0, $t0 #t2 should be 1
+MOVZ $t3, $t0, $t0 #t3 should be 0
+MOVZ $t4, $t0, $t1 #t4 should be 1
 </a>
     </comp>
     <comp lib="4" loc="(620,410)" name="Register">
@@ -2060,11 +2052,11 @@ MOVN $t7, $t6, $t2 #Value in $t7 should be 8 because $t6 is not 0
     <wire from="(430,230)" to="(480,230)"/>
     <wire from="(430,250)" to="(480,250)"/>
     <wire from="(590,240)" to="(680,240)"/>
-    <wire from="(430,250)" to="(430,300)"/>
-    <wire from="(430,200)" to="(430,230)"/>
+    <wire from="(430,210)" to="(430,230)"/>
+    <wire from="(430,250)" to="(430,310)"/>
     <wire from="(160,190)" to="(290,190)"/>
-    <wire from="(390,200)" to="(430,200)"/>
-    <wire from="(390,300)" to="(430,300)"/>
+    <wire from="(390,210)" to="(430,210)"/>
+    <wire from="(390,310)" to="(430,310)"/>
     <wire from="(510,240)" to="(550,240)"/>
     <comp lib="0" loc="(160,190)" name="Pin">
       <a name="width" val="32"/>
@@ -3050,11 +3042,11 @@ MOVN $t7, $t6, $t2 #Value in $t7 should be 8 because $t6 is not 0
     <wire from="(590,780)" to="(660,780)"/>
     <wire from="(590,660)" to="(660,660)"/>
     <wire from="(590,1260)" to="(660,1260)"/>
+    <wire from="(590,1220)" to="(660,1220)"/>
+    <wire from="(590,1180)" to="(660,1180)"/>
     <wire from="(590,1340)" to="(660,1340)"/>
     <wire from="(590,1420)" to="(660,1420)"/>
     <wire from="(590,1460)" to="(660,1460)"/>
-    <wire from="(590,1220)" to="(660,1220)"/>
-    <wire from="(590,1180)" to="(660,1180)"/>
     <wire from="(390,540)" to="(460,540)"/>
     <wire from="(290,1010)" to="(350,1010)"/>
     <wire from="(250,1150)" to="(570,1150)"/>
@@ -3115,8 +3107,8 @@ MOVN $t7, $t6, $t2 #Value in $t7 should be 8 because $t6 is not 0
     <wire from="(430,500)" to="(430,980)"/>
     <wire from="(640,770)" to="(660,770)"/>
     <wire from="(640,1410)" to="(660,1410)"/>
-    <wire from="(310,200)" to="(330,200)"/>
     <wire from="(310,160)" to="(330,160)"/>
+    <wire from="(310,200)" to="(330,200)"/>
     <wire from="(310,80)" to="(330,80)"/>
     <wire from="(310,120)" to="(330,120)"/>
     <wire from="(250,500)" to="(270,500)"/>
@@ -3128,16 +3120,16 @@ MOVN $t7, $t6, $t2 #Value in $t7 should be 8 because $t6 is not 0
     <wire from="(250,500)" to="(250,610)"/>
     <wire from="(590,1390)" to="(620,1390)"/>
     <wire from="(780,580)" to="(910,580)"/>
+    <wire from="(590,720)" to="(660,720)"/>
     <wire from="(590,880)" to="(660,880)"/>
+    <wire from="(590,800)" to="(660,800)"/>
     <wire from="(590,640)" to="(660,640)"/>
     <wire from="(330,1030)" to="(340,1030)"/>
-    <wire from="(590,720)" to="(660,720)"/>
+    <wire from="(590,680)" to="(660,680)"/>
     <wire from="(590,920)" to="(660,920)"/>
     <wire from="(590,1160)" to="(660,1160)"/>
-    <wire from="(590,1240)" to="(660,1240)"/>
     <wire from="(590,1200)" to="(660,1200)"/>
-    <wire from="(590,800)" to="(660,800)"/>
-    <wire from="(590,680)" to="(660,680)"/>
+    <wire from="(590,1240)" to="(660,1240)"/>
     <wire from="(590,1360)" to="(660,1360)"/>
     <wire from="(590,1440)" to="(660,1440)"/>
     <wire from="(590,1320)" to="(660,1320)"/>
@@ -3157,31 +3149,31 @@ MOVN $t7, $t6, $t2 #Value in $t7 should be 8 because $t6 is not 0
     <wire from="(290,540)" to="(320,540)"/>
     <wire from="(640,860)" to="(660,860)"/>
     <wire from="(310,210)" to="(330,210)"/>
+    <wire from="(310,290)" to="(330,290)"/>
     <wire from="(310,130)" to="(330,130)"/>
+    <wire from="(310,170)" to="(330,170)"/>
+    <wire from="(310,250)" to="(330,250)"/>
     <wire from="(310,90)" to="(330,90)"/>
     <wire from="(290,550)" to="(310,550)"/>
     <wire from="(310,370)" to="(330,370)"/>
+    <wire from="(310,330)" to="(330,330)"/>
     <wire from="(290,1030)" to="(310,1030)"/>
     <wire from="(630,1400)" to="(660,1400)"/>
-    <wire from="(310,330)" to="(330,330)"/>
-    <wire from="(310,290)" to="(330,290)"/>
-    <wire from="(310,250)" to="(330,250)"/>
-    <wire from="(310,170)" to="(330,170)"/>
     <wire from="(590,840)" to="(620,840)"/>
     <wire from="(630,760)" to="(660,760)"/>
     <wire from="(250,980)" to="(250,1150)"/>
     <wire from="(510,1000)" to="(920,1000)"/>
     <wire from="(700,520)" to="(700,640)"/>
     <wire from="(590,890)" to="(660,890)"/>
-    <wire from="(320,390)" to="(330,390)"/>
+    <wire from="(590,930)" to="(660,930)"/>
     <wire from="(590,810)" to="(660,810)"/>
+    <wire from="(320,390)" to="(330,390)"/>
     <wire from="(590,690)" to="(660,690)"/>
     <wire from="(590,650)" to="(660,650)"/>
-    <wire from="(590,930)" to="(660,930)"/>
     <wire from="(590,1170)" to="(660,1170)"/>
+    <wire from="(590,1250)" to="(660,1250)"/>
     <wire from="(590,1330)" to="(660,1330)"/>
     <wire from="(590,1450)" to="(660,1450)"/>
-    <wire from="(590,1250)" to="(660,1250)"/>
     <wire from="(590,1210)" to="(660,1210)"/>
     <wire from="(830,600)" to="(910,600)"/>
     <wire from="(590,820)" to="(600,820)"/>
